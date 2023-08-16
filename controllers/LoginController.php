@@ -4,6 +4,10 @@ namespace Controllers;
 
 use MVC\Router;
 
+use Exception;
+use Model\Login;
+
+
 class LoginController {
     public static function index(Router $router){
         $router->render('login/index', []);
