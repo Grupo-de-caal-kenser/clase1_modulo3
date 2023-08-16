@@ -24,8 +24,6 @@
             border: 2px solid;
         }
         h1 {
-        border: 4px solid black;
-        background-color: white;
         text-shadow: -1px 2px 4px 4px white;
         }
 
@@ -70,6 +68,11 @@
             padding: 12px 20px;
             font-size: 16px;
             cursor: pointer;
+            margin: auto; /* Centrar horizontalmente */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centrar verticalmente */
+
         }
         .login-button:hover {
             background-color: #1562e8;
@@ -81,7 +84,7 @@
 
 <div class="row mb-3">
   <div class="col text-center">
-    <h1>Proyecto SUBTTE. INF CAAL JUC</h1>
+    <h1>LOGIN</h1>
   </div>
 </div>
 <div class="login-container">
@@ -107,6 +110,6 @@
     <img src="./images/cit.png" width="100%" alt="">
   </div>
 </div>
-<script src="build/js/inicio.js"></script>
+<script src="<?= asset('./build/js/login/index.js') ?>"></script>
 </body>
 </html>
