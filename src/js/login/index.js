@@ -30,21 +30,28 @@ const login = async e => {
         const respuesta = await fetch(url, config);
         const data = await respuesta.json();
 
-        const {codigo, mensaje, detalle} = data;
+        const { codigo, mensaje, redireccion } = data; // Agregar "redireccion"
+
         let icon = 'info';
-        if(codigo == 1){
-            icon = 'success'
-        }else if(codigo == 2){
-            icon = 'warning'
-        }else{
-            icon = 'error'
+        if (codigo == 1) {
+            icon = 'success';
+            
+            // Redirige a la página de menú si la autenticación es exitosa
+            if (redireccion) {
+                window.location.href = redireccion;
+                return;
+            }
+        } else if (codigo == 2) {
+            icon = 'warning';
+        } else {
+            icon = 'error';
         }
 
         Toast.fire({
-            title : mensaje,
+            title: mensaje,
             icon
-        })
-      
+        });
+
     } catch (error) {
         console.log(error);
     }

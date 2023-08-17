@@ -26,11 +26,13 @@ class LoginController {
                 if ($verificacion) {
                     session_start();
                     $_SESSION['auth_user'] = $catalogo;
-
+                
                     echo json_encode([
                         'codigo' => 1,
-                        'mensaje' => "Sesión iniciada correctamente. Bienvenido $nombre"
+                        'mensaje' => "Sesión iniciada correctamente. Bienvenido $nombre",
+                        'redireccion' => '/login_pruebas/menu' // Cambiar la ruta a la correcta
                     ]);
+                    
                 } else {
                     echo json_encode([
                         'codigo' => 2,
