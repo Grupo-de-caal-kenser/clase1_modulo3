@@ -10,9 +10,13 @@ use Model\Usuario;
 class LoginController {
 
     public static function index(Router $router) {
-        $router->render('login/index', []);
-    }
 
+        if ($_SESSION['auth_user'] == ""){
+            $router->render('login/index', []);
+        }else{
+        $router->render('menu/index', []);
+    }
+    }
     public static function loginAPI() {
         $catalogo = filter_var($_POST['usu_catalogo'], FILTER_SANITIZE_NUMBER_INT);
         $password = filter_var($_POST['usu_password'], FILTER_DEFAULT);

@@ -38,7 +38,7 @@ const login = async e => {
             
             // Redirige a la página de menú si la autenticación es exitosa
             if (redireccion) {
-                window.location.href = redireccion;
+      window.location.href = redireccion;
                 return;
             }
         } else if (codigo == 2) {
@@ -55,6 +55,6 @@ const login = async e => {
     } catch (error) {
         console.log(error);
     }
+    
 }
-
 formLogin.addEventListener('submit', login);
