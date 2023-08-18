@@ -101,7 +101,7 @@
             <button class="login-button" type="submit">Iniciar Sesión</button>
         </form>
         <div class="d-grid">
-            <p class="mb-0 text-center"> ¡No tiene cuenta!<a href="/login_pruebas/registro" class="text-primary fw-bold ms-2">REGISTRARSE</a></p>
+            <p class="mb-0 text-center"> ¡No tiene cuenta!<a href="/login/registro" class="text-primary fw-bold ms-2">REGISTRARSE</a></p>
         </div>
     </div>
 
